@@ -4,21 +4,16 @@ Este repositório contém um script de menu para tarefas de manutenção no Wind
 
 Abaixo há uma explicação breve do que é o menu seguida de uma análise detalhada sobre como o código de um arquivo `.bat` desse tipo costuma ser estruturado e quais partes você provavelmente encontrará no `MENU MANUTENÇÃO.bat`.
 
-Breve explicação
-- O "menu de manutenção" é um script interativo que apresenta opções numeradas (ou por tecla) ao usuário. Ao escolher uma opção, o script executa uma sequência de comandos para realizar uma tarefa de manutenção específica.
-- A interface costuma ser simples (texto no terminal), com mensagens informativas, confirmação de ações perigosas e retorno ao menu principal após concluir cada tarefa.
-
 Análise detalhada do código (o que esperar no .bat)
 1. Cabeçalho e metadados
 - Comentários iniciais com nome, autor, versão e propósito.
 - Possível verificação de encoding/locale (para exibir acentos corretamente) e configuração de cores com o comando `color`.
 
 2. Verificação de privilégios (Admin)
-- Muitos scripts de manutenção exigem privilégios elevados. O script pode checar se está rodando como administrador (por exemplo, tentativas com `net session >nul 2>&1` ou `whoami /groups | find "S-1-5-32-544"`).
-- Se não houver privilégios, exibir mensagem pedindo execução como Administrador ou tentar relançar usando `powershell -Command "Start-Process cmd -Verb RunAs -ArgumentList '/c ...'"`.
+- Muitos scripts de manutenção exigem privilégios elevados. O script pode checar se está rodando como administrador.
+- Se não houver privilégios, exibir mensagem pedindo execução como Administrador.
 
 3. Estrutura do menu
-- Limpeza da tela (`cls`) e apresentação do menu com `echo`.
 - Entrada do usuário para escolher opção (com `set /p choice=`) ou uso do comando `choice` (mais amigável para capturar tecla).
 - Loop principal implementado com `:MENU` e `GOTO MENU` para retornar após execução das tarefas.
 
