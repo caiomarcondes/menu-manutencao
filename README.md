@@ -1,8 +1,8 @@
-# MENU MANUTENÇÃO
+# MENU MANUTENÇÃO v2.1
 
 ## DEMONSTRAÇÃO
 
-<center><img width="614" height="528" alt="image" src="https://github.com/user-attachments/assets/13a15fe6-ed98-48c3-8080-de0b17d23bd0" /></center>
+<img width="614" height="528" alt="image" src="https://github.com/user-attachments/assets/13a15fe6-ed98-48c3-8080-de0b17d23bd0" />
 
 Este repositório contém um script de menu para tarefas de manutenção no Windows (arquivo principal: `MENU MANUTENÇÃO.bat`). O objetivo do menu é oferecer uma interface simples em linha de comando para executar rotinas comuns de manutenção do sistema — por exemplo, limpeza de temporários, diagnóstico de disco, verificação de arquivos do sistema, ajustes de rede, reinício de serviços e outras tarefas administrativas.
 
